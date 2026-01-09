@@ -1,0 +1,23 @@
+/* =======BASE THEME ============ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at top, #020617, #000000);
+  color: #e5e7eb;
+  font-family: "JetBrains Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ⬅️ header sits higher */
+}
+
+main {
+  width: 100%;
+  max-width: 680px;
+  padding: 2.4rem 1.4rem;
+  text-align: center;
+  margin-top: 3.5rem; /* ⬅️ gap between header & game */
+}
