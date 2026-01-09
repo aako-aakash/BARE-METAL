@@ -1,16 +1,55 @@
-# React + Vite
+# 🧠 Bare Metal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Bare Metal** is a developer-themed word survival game built with React.  
+Each incorrect guess removes a programming language from the ecosystem — until only **Assembly** remains.
 
-Currently, two official plugins are available:
+> *This is the endgame of abstractions.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎮 How the Game Works
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- A random word is selected at the start of each game
+- Players guess letters using an on-screen keyboard
+- Each wrong guess eliminates one programming language
+- The game ends when:
+  - ✅ The word is fully guessed (win)
+  - ❌ Only Assembly remains (loss)
+  - ⏱ The timer runs out
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- Interactive word-guessing gameplay
+- Tile-based word display with visible blanks
+- On-screen keyboard with real-time feedback
+- Visual elimination of programming languages
+- Remaining guesses counter and countdown timer
+- Win celebration and loss feedback animations
+- Fully responsive, game-style UI
+- Accessible markup with screen-reader support
+
+---
+
+## 🛠 Tech Stack
+
+- **React** (functional components & hooks)
+- **JavaScript (ES6+)**
+- **CSS** (Flexbox, Grid, animations, pseudo-elements)
+- **Vite** for development and bundling
+
+---
+
+## 🧠 What This Project Demonstrates
+
+- State-driven UI design using React hooks
+- Clean separation of game logic and presentation
+- UX decisions inspired by game design principles
+- Responsive layouts and interaction feedback
+- Incremental development with progressive polish
+
+---
+👨‍💻 Author
+
+Aakash Kumar Saw
