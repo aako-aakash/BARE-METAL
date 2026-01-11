@@ -1,34 +1,37 @@
 # 🧠 Bare Metal
 
-**Bare Metal** is a developer-themed word survival game built with React.  
-Each incorrect guess removes a programming language from the ecosystem — until only **Assembly** remains.
+**Bare Metal** is a developer-themed word survival game built with **React**.  
+Each incorrect guess eliminates a programming language — until only **Assembly** remains.
 
-> *This is the endgame of abstractions.*
+> *When abstractions fall, Bare Metal survives.*
 
 ---
 
-## 🎮 How the Game Works
+## 🎮 Gameplay Overview
 
 - A random word is selected at the start of each game
 - Players guess letters using an on-screen keyboard
 - Each wrong guess eliminates one programming language
 - The game ends when:
   - ✅ The word is fully guessed (win)
-  - ❌ Only Assembly remains (loss)
-  - ⏱ The timer runs out
+  - ❌ All high-level languages are eliminated (loss)
+  - ⏱ Time runs out
 
 ---
 
 ## ✨ Features
 
-- Interactive word-guessing gameplay
 - Tile-based word display with visible blanks
-- On-screen keyboard with real-time feedback
-- Visual elimination of programming languages
-- Remaining guesses counter and countdown timer
-- Win celebration and loss feedback animations
-- Fully responsive, game-style UI
-- Accessible markup with screen-reader support
+- Interactive on-screen keyboard with visual feedback
+- Progressive elimination of programming languages
+- Random farewell messages on language elimination
+- Countdown timer with automatic loss condition
+- 🎵 Sound effects for elimination, win, and loss
+- 🔇 Mute / unmute toggle for audio control
+- 🎉 Full-screen confetti celebration on win
+- 🎯 Auto-focus on “New Game” button after game end
+- Fully responsive layout (handles long words gracefully)
+- Accessible UI with ARIA support and keyboard focus management
 
 ---
 
@@ -36,20 +39,38 @@ Each incorrect guess removes a programming language from the ecosystem — until
 
 - **React** (functional components & hooks)
 - **JavaScript (ES6+)**
-- **CSS** (Flexbox, Grid, animations, pseudo-elements)
+- **CSS** (Flexbox, Grid, responsive design, animations)
 - **Vite** for development and bundling
 
 ---
 
 ## 🧠 What This Project Demonstrates
 
-- State-driven UI design using React hooks
-- Clean separation of game logic and presentation
-- UX decisions inspired by game design principles
-- Responsive layouts and interaction feedback
-- Incremental development with progressive polish
+- Predictable state management and derived state handling
+- Correct usage of `useEffect` and `useRef` for side effects
+- Avoidance of random logic during render
+- Thoughtful UX and accessibility considerations
+- Clean component architecture and separation of concerns
+- Debugging and fixing real-world React rendering issues
 
 ---
+
+## 🚀 Getting Started
+
+Clone the repository and run the project locally:
+
+```bash
+git clone https://github.com/aako-aakash/BARE-METAL.git
+cd BARE-METAL
+npm install
+npm run dev
+
+```
+
 👨‍💻 Author
 
-Aakash Kumar Saw
+  AAKASH
+
+🔗 LinkedIn: https://www.linkedin.com/in/akash-kumar-saw-bb1630258
+
+

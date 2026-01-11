@@ -388,3 +388,42 @@ main {
   75% { transform: translateX(-3px); }
   100% { transform: translateX(0); }
 }
+
+/* ===== FOOTER ===== */
+.app-footer {
+  margin-top: 3rem;
+  padding: 1.6rem 0 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-name {
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+  color: #e5e7eb;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.footer-links a {
+  color: #f97316;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.65rem;
+  opacity: 0.5;
+}

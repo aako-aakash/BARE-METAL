@@ -6,6 +6,8 @@ import { clsx } from "clsx"
 import "./App.css"
 
 import Header from "./components/Header"
+import Footer from "./components/Footer"
+
 import GameStatus from "./components/GameStatus"
 import LanguageChips from "./components/LanguageChips"
 import WordDisplay from "./components/WordDisplay"
@@ -50,6 +52,7 @@ export default function App() {
   const isLastGuessIncorrect =
     lastGuessedLetter && !currentWord.includes(lastGuessedLetter)
   const { width, height } = useWindowSize()
+  const newGameButtonRef = useRef(null)
 
   /* ================= AUDIO ================= */
   const eliminateAudio = useRef(new Audio(eliminateSound))
@@ -88,6 +91,13 @@ export default function App() {
     lost: isGameLost,
     farewell: !isGameOver && isLastGuessIncorrect,
   })
+  // newGame Button get focused
+  useEffect(() => {
+    if (isGameOver && newGameButtonRef.current) {
+      newGameButtonRef.current.focus()
+    }
+  }, [isGameOver])
+
 
   /* ================= TIMER ================= */
   useEffect(() => {
@@ -212,7 +222,16 @@ export default function App() {
         addGuessedLetter={addGuessedLetter}
       />
 
-      {isGameOver && <NewGameButton startNewGame={startNewGame} />}
+      {isGameOver && (
+        <NewGameButton
+          startNewGame={startNewGame}
+          buttonRef={newGameButtonRef}
+        />
+      )}
+
+      <Footer />
+
+
     </main>
   )
 }
