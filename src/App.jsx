@@ -82,7 +82,7 @@ export default function App() {
   }
 
   function startNewGame() {
-    setCurrentWord(getRandomWordByDifficulty(difficulty))
+    setCurrentWord(getResponsiveWord(difficulty))
     setGuessedLetters([])
     setTimeLeft(TOTAL_TIME)
     setFarewellText(null)
