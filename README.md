@@ -67,7 +67,7 @@ npm run dev
 ```
 
 👨‍💻 Author
-# Aakash Kumar Saw
+# Akash Kumar Saw
 B.Tech CSE (AI & Machine Learning)
 D Y Patil University, School of Engineering and Technology
 
