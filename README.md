@@ -1,76 +1,75 @@
 # 🧠 Bare Metal
 
-**Bare Metal** is a developer-themed word survival game built with **React**.  
-Each incorrect guess eliminates a programming language — until only **Assembly** remains.
+**Bare Metal** is a developer-themed word guessing game built with **React**.  
+Each wrong guess progressively eliminates a programming language — until only **Assembly** remains.
 
-> *When abstractions fall, Bare Metal survives.*
+> When abstractions fail, you’re left with Bare Metal.
 
 ---
 
-## 🎮 Gameplay Overview
+## 🎮 How the Game Works
 
 - A random word is selected at the start of each game
-- Players guess letters using an on-screen keyboard
-- Each wrong guess eliminates one programming language
+- Guess letters using an on-screen keyboard
+- Every incorrect guess removes one programming language
 - The game ends when:
-  - ✅ The word is fully guessed (win)
-  - ❌ All high-level languages are eliminated (loss)
-  - ⏱ Time runs out
+  - ✅ The word is fully guessed
+  - ❌ All high-level languages are eliminated
+  - ⏱ The timer runs out
 
 ---
 
 ## ✨ Features
 
-- Tile-based word display with visible blanks
-- Interactive on-screen keyboard with visual feedback
+- Interactive word tiles with visible blanks
+- On-screen keyboard with correct / wrong feedback
 - Progressive elimination of programming languages
-- Random farewell messages on language elimination
-- Countdown timer with automatic loss condition
-- 🎵 Sound effects for elimination, win, and loss
-- 🔇 Mute / unmute toggle for audio control
-- 🎉 Full-screen confetti celebration on win
-- 🎯 Auto-focus on “New Game” button after game end
-- Fully responsive layout (handles long words gracefully)
-- Accessible UI with ARIA support and keyboard focus management
+- Random farewell messages on each elimination
+- Difficulty levels: **Easy, Medium, Hard**
+- Countdown timer
+- 🎉 Full-screen confetti on win
+- 🔊 Sound effects for elimination, win, and loss
+- 🔇 Mute / unmute sound control
+- 🎯 Auto-focus on “New Game” button after game ends
+- Fully responsive UI (handles long words on mobile)
+- Accessible UI with keyboard focus management and ARIA support
 
 ---
 
 ## 🛠 Tech Stack
 
-- **React** (functional components & hooks)
+- **React** (Hooks, functional components)
 - **JavaScript (ES6+)**
-- **CSS** (Flexbox, Grid, responsive design, animations)
-- **Vite** for development and bundling
+- **CSS** (Flexbox, Grid, responsive design)
+- **Vite** for development and build
 
 ---
 
-## 🧠 What This Project Demonstrates
+## 🧠 Key Learnings
 
-- Predictable state management and derived state handling
-- Correct usage of `useEffect` and `useRef` for side effects
-- Avoidance of random logic during render
-- Thoughtful UX and accessibility considerations
-- Clean component architecture and separation of concerns
-- Debugging and fixing real-world React rendering issues
+- Managing complex state and derived values cleanly
+- Correct handling of side effects using `useEffect` and `useRef`
+- Preventing unnecessary re-renders and unstable UI
+- Designing game-like UX instead of form-based UI
+- Improving accessibility and keyboard usability
+- Debugging real-world React issues (timers, re-renders, audio)
 
 ---
 
 ## 🚀 Getting Started
 
-Clone the repository and run the project locally:
-
 ```bash
 git clone https://github.com/aako-aakash/BARE-METAL.git
-cd BARE-METAL
+cd bare-metal
 npm install
 npm run dev
 
 ```
 
 👨‍💻 Author
-
-  AAKASH
+# Aakash Kumar Saw
+B.Tech CSE (AI & Machine Learning)
+D Y Patil University, School of Engineering and Technology
 
 🔗 LinkedIn: https://www.linkedin.com/in/akash-kumar-saw-bb1630258
-
 

@@ -54,6 +54,56 @@ main {
   border-radius: 2px;
 }
 
+/* ===== DIFFICULTY SELECTOR ===== */
+
+.difficulty-selector {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0.6rem 0 1.2rem;
+}
+
+.difficulty-selector button {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #e5e7eb;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.difficulty-selector button:hover:not(:disabled) {
+  border-color: #f97316;
+  color: #f97316;
+  background-color: rgba(249, 115, 22, 0.15);
+
+}
+
+.difficulty-selector button.active {
+  background-color: #f97316;
+  color: #020617;
+  border-color: #f97316;
+}
+
+.difficulty-selector button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.difficulty-hint {
+  font-size: 0.65rem;
+  text-align: center;
+  opacity: 0.6;
+  margin-bottom: 0.8rem;
+}
+
+.difficulty-selector button:focus-visible{
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+}
 
 
 /* ======== GAME STATUS  ========= */

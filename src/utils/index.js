@@ -1,2 +1,2 @@
-export { getRandomWord } from "./getRandomWord"
 export { getFarewellText } from "./getFarewellText"
+export {getResponsiveWord} from "./wordUtils"

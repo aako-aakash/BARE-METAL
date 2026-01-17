@@ -6,6 +6,7 @@ import { clsx } from "clsx"
 import "./App.css"
 
 import Header from "./components/Header"
+import DifficultySelector from "./components/DifficultySelector"
 import Footer from "./components/Footer"
 
 import GameStatus from "./components/GameStatus"
@@ -15,7 +16,7 @@ import Keyboard from "./components/Keyboard"
 import NewGameButton from "./components/NewGameButton"
 
 import { languages } from "./data/languages"
-import { getFarewellText, getRandomWord } from "./utils"
+import { getFarewellText, getResponsiveWord } from "./utils"
 
 import eliminateSound from "./assets/eliminate.mp3"
 import winSound from "./assets/win.mp3"
@@ -27,11 +28,15 @@ export default function App() {
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
   /* ================= STATE ================= */
-  const [currentWord, setCurrentWord] = useState(() => getRandomWord())
+  const [difficulty, setDifficulty] = useState("medium")
+  const [currentWord, setCurrentWord] = useState(
+    () => getResponsiveWord(difficulty))
+
   const [guessedLetters, setGuessedLetters] = useState([])
   const [timeLeft, setTimeLeft] = useState(TOTAL_TIME)
   const [farewellText, setFarewellText] = useState(null)
   const [isMuted, setIsMuted] = useState(false)
+  
 
   /* ================= DERIVED VALUES ================= */
   const wrongGuessCount =
@@ -59,9 +64,11 @@ export default function App() {
   const winAudio = useRef(new Audio(winSound))
   const loseAudio = useRef(new Audio(loseSound))
 
-  eliminateAudio.current.volume = 0.35
-  winAudio.current.volume = 0.45
-  loseAudio.current.volume = 0.45
+  useEffect(() => {
+    eliminateAudio.current.volume = 0.35
+    winAudio.current.volume = 0.45
+    loseAudio.current.volume = 0.45
+  }, [])
 
   const prevWrongGuessCount = useRef(wrongGuessCount)
   const hasPlayedWinSound = useRef(false)
@@ -75,7 +82,7 @@ export default function App() {
   }
 
   function startNewGame() {
-    setCurrentWord(getRandomWord())
+    setCurrentWord(getRandomWordByDifficulty(difficulty))
     setGuessedLetters([])
     setTimeLeft(TOTAL_TIME)
     setFarewellText(null)
@@ -185,6 +192,17 @@ export default function App() {
       </button>
 
       <Header />
+
+      <DifficultySelector
+        difficulty={difficulty}
+        setDifficulty={setDifficulty}
+        isGameOver={isGameOver}
+      />
+
+      <p className="difficulty-hint">
+        Difficulty applies to the next game
+      </p>
+
 
       <GameStatus
         className={gameStatusClass}
